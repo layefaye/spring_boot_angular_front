@@ -1,0 +1,36 @@
+<div class="card">
+  <div class="card-body">
+    <table class="table table-bordered table-light table-sm table-responsive">
+      <thead>
+        <th>ID</th>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Phone</th>
+        <th>Address</th>
+        <th>Email</th>
+        <th>Action</th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let student of students">
+          <td>
+            <b>{{ student.id }}</b>
+          </td>
+          <td>{{ student.firstname }}</td>
+          <td>{{ student.lastname }}</td>
+          <td>{{ student.phone }}</td>
+          <td>{{ student.address }}</td>
+          <td>{{ student.email }}</td>
+          <td>
+            <button
+              class="btn btn-sm btn-outline-dark"
+              [routerLink]="['/student/', student.id]"
+              type="button"
+            >
+              view
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
