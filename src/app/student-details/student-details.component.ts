@@ -1,8 +1,9 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
-import { ActivatedRoute, ParamMap } from '@angular/router';
+import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { Student } from '../interfaces/student.interface';
 import { StudentService } from '../services/student.service';
+import { StudentComponent } from '../student/student.component';
 
 @Component({
   selector: 'app-student-details',
@@ -13,7 +14,8 @@ export class StudentDetailsComponent {
   student: Student;
   constructor(
     private studentService: StudentService,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private router: Router
   ) {}
 
   ngOnInit() {
@@ -28,5 +30,16 @@ export class StudentDetailsComponent {
           this.student = student;
         });
     });
+  }
+
+  delete(id: number): void {
+    this.activatedRoute.paramMap.subscribe((params: ParamMap) => {
+      this.studentService
+        .delete(id)
+        .subscribe(() => console.log('suppression réussie!'));
+    });
+
+    location.replace('/students');
+    // this.router.navigate(['/students']);
   }
 }

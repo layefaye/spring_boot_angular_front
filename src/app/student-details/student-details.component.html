@@ -18,7 +18,12 @@
           <span>Address: {{ student.address }}</span>
           <hr />
           <div class="text-center">
-            <button class="btn btn-outline-danger btn-sm">delete</button>&nbsp;
+            <button
+              class="btn btn-outline-danger btn-sm"
+              (click)="delete(student.id)"
+            >
+              delete</button
+            >&nbsp;
             <button class="btn btn-outline-dark btn-sm">edit</button>
           </div>
         </div>

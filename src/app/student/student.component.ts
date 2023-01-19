@@ -9,7 +9,8 @@ import { StudentService } from '../services/student.service';
 })
 export class StudentComponent {
   constructor(private studentService: StudentService) {}
-  students: any[];
+  public students: any[];
+
   ngOnInit() {
     this.getAll();
   }

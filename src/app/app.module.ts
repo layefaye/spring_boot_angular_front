@@ -6,9 +6,21 @@ import { AppComponent } from './app.component';
 import { StudentComponent } from './student/student.component';
 import { StudentDetailsComponent } from './student-details/student-details.component';
 import { HttpClientModule } from '@angular/common/http';
+import { StudentSaveComponent } from './student-save/student-save.component';
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
-  declarations: [AppComponent, StudentComponent, StudentDetailsComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  declarations: [
+    AppComponent,
+    StudentComponent,
+    StudentDetailsComponent,
+    StudentSaveComponent,
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

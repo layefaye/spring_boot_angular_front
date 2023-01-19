@@ -18,4 +18,12 @@ export class StudentService {
   getOne(id: number): Observable<Student> {
     return this.http.get<Student>(`${this.apiUrl}/find/${id}`);
   }
+
+  delete(id: number): Observable<any> {
+    return this.http.delete<any>(`${this.apiUrl}/delete/${id}`);
+  }
+
+  save(student: Student): Observable<any> {
+    return this.http.post<any>(`${this.apiUrl}/save`, student);
+  }
 }
