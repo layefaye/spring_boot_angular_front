@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Student } from '../interfaces/student.interface';
 import { StudentService } from '../services/student.service';
 
 @Component({
@@ -43,7 +42,4 @@ export class StudentSaveComponent {
       location.replace('/students');
     }
   }
-}
-function Student(): any {
-  throw new Error('Function not implemented.');
 }

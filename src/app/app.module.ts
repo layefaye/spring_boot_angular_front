@@ -8,12 +8,14 @@ import { StudentDetailsComponent } from './student-details/student-details.compo
 import { HttpClientModule } from '@angular/common/http';
 import { StudentSaveComponent } from './student-save/student-save.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { StudentEditComponent } from './student-edit/student-edit.component';
 @NgModule({
   declarations: [
     AppComponent,
     StudentComponent,
     StudentDetailsComponent,
     StudentSaveComponent,
+    StudentEditComponent,
   ],
   imports: [
     BrowserModule,

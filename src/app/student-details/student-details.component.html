@@ -24,7 +24,12 @@
             >
               delete</button
             >&nbsp;
-            <button class="btn btn-outline-dark btn-sm">edit</button>
+            <button
+              [routerLink]="['/student/edit/', student.id]"
+              class="btn btn-outline-dark btn-sm"
+            >
+              edit
+            </button>
           </div>
         </div>
       </div>

@@ -26,4 +26,8 @@ export class StudentService {
   save(student: Student): Observable<any> {
     return this.http.post<any>(`${this.apiUrl}/save`, student);
   }
+
+  edit(student: Student): Observable<any> {
+    return this.http.put<any>(`${this.apiUrl}/edit`, student);
+  }
 }

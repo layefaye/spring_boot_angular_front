@@ -18,7 +18,15 @@ export class StudentComponent {
   getAll(): void {
     this.studentService.getAll().subscribe((result: Student[]) => {
       console.log(result);
-      this.students = result;
+      this.students = result.reverse();
     });
+  }
+
+  delete(id: number): void {
+    this.studentService
+      .delete(id)
+      .subscribe(() => console.log('suppression réussie!'));
+
+    location.replace('/students');
   }
 }

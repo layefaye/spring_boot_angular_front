@@ -40,6 +40,5 @@ export class StudentDetailsComponent {
     });
 
     location.replace('/students');
-    // this.router.navigate(['/students']);
   }
 }
